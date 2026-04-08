@@ -1,81 +1,65 @@
-# Trust Wallet Assets Info
+# POU PROTOCOLO V24 — Trust Wallet Assets Reference
 
 ![Check](https://github.com/trustwallet/assets/workflows/Check/badge.svg)
 
 ## Overview
 
-Trust Wallet token repository is a comprehensive, up-to-date collection of information about several thousands (!) of crypto tokens.
+This repository is maintained as the official asset reference for **POU PROTOCOLO V24** in the context of Trust Wallet asset listing standards and related ecosystem integrations.
 
-[Trust Wallet](https://trustwallet.com) uses token logos from this source, alongside a number of other projects.
+It is intended to support the public identity of the project through official token metadata, logo files, and asset-structure references compatible with the Trust Wallet assets model.
 
-The repository contains token info from several blockchains, info on dApps, staking validators, etc.
-For every token a logo and optional additional information is available (such data is not available on-chain).
+## Official Project
 
-Such a large collection can be maintained only through a community effort, so _feel free to add your token_.
+**POU PROTOCOLO V24** is a BNB Smart Chain protocol designed around:
 
-<center><img src='https://trustwallet.com/assets/images/media/assets/horizontal_blue.png' height="200"></center>
+- treasury protection
+- controlled token issuance
+- reserve-based structure
+- timed claim logic
+- compliance-ready architecture
 
-## How to add token
+## Official Website
 
-Please note that __brand new tokens are not accepted__,
-the projects have to be sound, with information available, and __non-minimal circulation__
-(for limit details see <https://developer.trustwallet.com/listing-new-assets/requirements>).
+https://poureservavalor.com
 
-### Assets App
+## Official Network
 
-The [Assets web app](https://assets.trustwallet.com) can be used for most new token additions (Github account is needed).
+- **Blockchain:** BNB Smart Chain
+- **Chain ID:** 56
+- **Symbol:** POU
 
-### Quick starter
+## Official Contracts
 
-Details of the repository structure and contribution guidelines are listed on the
-[Developers site](https://developer.trustwallet.com/listing-new-assets/new-asset).
-Here is a quick starter summary for the most common use case.
+- **Official Token V24:** `0x4C42587b1DA6a121CBa48053C19A534B6C091198`
+- **Official Protocol V24:** `0xe7603361925c5483C22A02D5B3DeADD0ab467f5A`
 
+## Repository Purpose
 
-## Documentation
+This repository serves as the public reference point for the visual and metadata identity of **POU PROTOCOLO V24** within asset listing workflows.
 
-For details, see the [Developers site](https://developer.trustwallet.com):
+Its primary purpose is to support:
 
-- [Contribution guidelines](https://developer.trustwallet.com/listing-new-assets/repository_details)
+- official token logo publication
+- asset folder standardization
+- metadata consistency
+- public verification of project identity
+- Trust Wallet assets submission structure
 
-- [FAQ](https://developer.trustwallet.com/listing-new-assets/faq)
+## Asset Scope
 
-## Scripts
+The repository is focused on the official representation of the **POU** token and related public identity elements, especially for integrations that rely on standardized off-chain asset information.
 
-There are several scripts available for maintainers:
+Typical contents may include:
 
-- `make check` -- Execute validation checks; also used in continuous integration.
-- `make fix` -- Perform automatic fixes where possible
-- `make update-auto` -- Run automatic updates from external sources, executed regularly (GitHub action)
-- `make add-token asset_id=c60_t0x4Fabb145d64652a948d72533023f6E7A623C7C53` -- Create `info.json` file as asset template.
-- `make add-tokenlist asset_id=c60_t0x4Fabb145d64652a948d72533023f6E7A623C7C53` -- Adds a token to tokenlist.json.
-- `make add-tokenlist-extended asset_id=c60_t0x4Fabb145d64652a948d72533023f6E7A623C7C53` -- Adds a token to tokenlist-extended.json.
+- token logo files
+- asset folder structure
+- `info.json`
+- token metadata references
+- supporting branding material required for listings
 
-## On Checks
+## Standard Asset Path
 
-This repo contains a set of scripts for verification of all the information. Implemented as Golang scripts, available through `make check`, and executed in CI build; checks the whole repo.
-There are similar check logic implemented:
+For BNB Smart Chain, the standard asset path follows the Trust Wallet structure:
 
-- in assets-management app; for checking changed token files in PRs, or when creating a PR.  Checks diffs, can be run from browser environment.
-- in merge-fee-bot, which runs as a GitHub app shows result in PR comment. Executes in a non-browser environment.
-
-## Trading pair maintenance
-
-Info on supported trading pairs are stored in `tokenlist.json` files.
-Trading pairs can be updated --
-from Uniswap/Ethereum and PancakeSwap/Smartchain -- using update script (and checking in changes).
-Minimal limit values for trading pair inclusion are set in the [config file](https://github.com/trustwallet/assets/blob/master/.github/assets.config.yaml).
-There are also options for force-include and force-exclude in the config.
-
-## Disclaimer
-
-Trust Wallet team allows anyone to submit new assets to this repository. However, this does not mean that we are in direct partnership with all of the projects.
-
-Trust Wallet team will reject projects that are deemed as scam or fraudulent after careful review.
-Trust Wallet team reserves the right to change the terms of asset submissions at any time due to changing market conditions, risk of fraud, or any other factors we deem relevant.
-
-Additionally, spam-like behavior, including but not limited to mass distribution of tokens to random addresses will result in the asset being flagged as spam and possible removal from the repository.
-
-## License
-
-The scripts and documentation in this project are released under the [MIT License](LICENSE)
+```text
+blockchains/smartchain/assets/0x4C42587b1DA6a121CBa48053C19A534B6C091198/
